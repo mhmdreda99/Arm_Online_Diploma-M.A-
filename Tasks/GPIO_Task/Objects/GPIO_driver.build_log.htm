@@ -1,0 +1,296 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mhmd reda, army, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+D:\Embedded-Systems\ARM\KEIL_WORKSPACE\GPIO_DRIVER\GPIO_driver.uvprojx
+Project File Date:  05/28/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(17): warning: In file included from...
+./GPIO.h(16): warning: In file included from...
+./..\..\..\M.A_Diploma\STM32F42XXX_Device_Drivers\LIB\STD_TYPES.h(102): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H_ */
+                         ^
+main.c(17): warning: In file included from...
+./GPIO.h(82): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(18): warning: In file included from...
+./..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC.h(77): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(50): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+4 warnings generated.
+compiling main.c...
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(11): warning: In file included from...
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.h(77): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(37): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default: break;
+                                ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(70): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default: break;
+                                ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(73): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default: break;
+                ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(14): warning: unused parameter 'AHB_Prescaler' [-Wunused-parameter]
+void vRCC_SetSYSCLK(ClKSrcName_t ClkSrc, HSESrcName_t HSESRC, PLLSrcName_t PLLSrc, AHBPreName_t AHB_Prescaler, APB1PreName_t APB1_Prescaler, APB2PreName_t APB2_Prescaler)
+                                                                                                ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(14): warning: unused parameter 'APB1_Prescaler' [-Wunused-parameter]
+void vRCC_SetSYSCLK(ClKSrcName_t ClkSrc, HSESrcName_t HSESRC, PLLSrcName_t PLLSrc, AHBPreName_t AHB_Prescaler, APB1PreName_t APB1_Prescaler, APB2PreName_t APB2_Prescaler)
+                                                                                                                             ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(14): warning: unused parameter 'APB2_Prescaler' [-Wunused-parameter]
+void vRCC_SetSYSCLK(ClKSrcName_t ClkSrc, HSESrcName_t HSESRC, PLLSrcName_t PLLSrc, AHBPreName_t AHB_Prescaler, APB1PreName_t APB1_Prescaler, APB2PreName_t APB2_Prescaler)
+                                                                                                                                                           ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(103): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default:break;
+                ^
+../../../M.A_Diploma/Drivers/RCC_FILES/RCC.c(108): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+9 warnings generated.
+compiling RCC.c...
+GPIO.c(19): warning: In file included from...
+./GPIO.h(16): warning: In file included from...
+./..\..\..\M.A_Diploma\STM32F42XXX_Device_Drivers\LIB\STD_TYPES.h(102): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H_ */
+                         ^
+GPIO.c(19): warning: In file included from...
+./GPIO.h(82): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+GPIO.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOA: GPIOA_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(47): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOB: GPIOB_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(48): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOC: GPIOC_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(49): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOD: GPIOD_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(50): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOE: GPIOE_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(51): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOF: GPIOF_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(52): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOG: GPIOG_MODER |= (Mode << (2*Pin_Number)); break;
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(53): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOH: GPIOH_MODER |= (Mode << (2*Pin_Number)); break;             
+                                        ~~  ~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(62): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOA: GPIOA_MODER |=(Output_Type << (2*Pin_Number)); break;
+                                                ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(63): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOB: GPIOB_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(64): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOC: GPIOC_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(65): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOD: GPIOD_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(66): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOE: GPIOE_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(67): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOF: GPIOF_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(68): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOG: GPIOG_OTYPER |= (Output_Type << (2*Pin_Number)); break;
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(69): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOH: GPIOH_OTYPER |= (Output_Type << (2*Pin_Number)); break;             
+                                         ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(81): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOA: GPIOA_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOB: GPIOB_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(83): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOC: GPIOC_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(84): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOD: GPIOD_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(85): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOE: GPIOE_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(86): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOF: GPIOF_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(87): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOG: GPIOG_OSPEEDR |= (Speed << (2*Pin_Number)); break;
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(88): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOH: GPIOH_OSPEEDR |= (Speed << (2*Pin_Number)); break;          
+                                          ~~  ~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(98): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOA: GPIOA_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(99): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOB: GPIOB_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(100): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOC: GPIOC_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(101): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOD: GPIOD_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOE: GPIOE_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(103): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOF: GPIOF_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(104): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOG: GPIOG_PUPDR |= (Pull_Type << (2*Pin_Number)); break;
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(105): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                case GPIOH: GPIOH_PUPDR |= (Pull_Type << (2*Pin_Number)); break;                
+                                        ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(117): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOA: Read_Value = (GPIOA_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(118): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOB: Read_Value = (GPIOB_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(119): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOC: Read_Value = (GPIOC_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(120): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOD: Read_Value = (GPIOD_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(121): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOE: Read_Value = (GPIOE_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(122): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOF: Read_Value = (GPIOF_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(123): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOG: Read_Value = (GPIOG_IDR &(1U<<Pin_Number)); break;
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(124): warning: implicit conversion loses integer precision: 'unsigned long' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                case GPIOH: Read_Value = (GPIOH_IDR &(1U<<Pin_Number)); break;          
+                                       ~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(224): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOA: GPIOA_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(225): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOB: GPIOB_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(226): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOC: GPIOC_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(227): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOD: GPIOD_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(228): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOE: GPIOE_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(229): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOF: GPIOF_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(230): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOG: GPIOG_AFRL |= (Alt_Value << (4*Pin_Number)); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(231): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOH: GPIOH_AFRL |= (Alt_Value << (4*Pin_Number)); break;         
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~
+GPIO.c(241): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOA: GPIOA_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(242): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOB: GPIOB_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(243): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOC: GPIOC_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(244): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOD: GPIOD_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(245): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOE: GPIOE_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(246): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOF: GPIOF_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(247): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOG: GPIOG_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(248): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        case GPIOH: GPIOH_AFRH |= (Alt_Value << (4*(Pin_Number % 8))); break;           
+                                               ~~  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+GPIO.c(260): warning: no newline at end of file [-Wnewline-eof]
+/*************** END OF FUNCTIONS ***************************************************************************/
+                                                                                                              ^
+59 warnings generated.
+compiling GPIO.c...
+linking...
+Program Size: Code=1328 RO-data=444 RW-data=0 ZI-data=1632  
+".\Objects\GPIO_driver.axf" - 0 Error(s), 72 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Mored\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

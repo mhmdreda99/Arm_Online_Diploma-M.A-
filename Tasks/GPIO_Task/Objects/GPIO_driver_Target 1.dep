@@ -1,0 +1,36 @@
+Dependencies for Project 'GPIO_driver', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\main.c)(0x60B0CF20)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mored/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mored/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F429xx -D_RTE_-o ./objects/main.o -MD)
+I (GPIO_Private.h)(0x60B041C3)
+I (GPIO.h)(0x60B05152)
+I (..\..\..\M.A_Diploma\STM32F42XXX_Device_Drivers\LIB\STD_TYPES.h)(0x60B02075)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC.h)(0x6094C36B)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC_CONFIG.h)(0x6094C36D)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\STD_TYPES.h)(0x6094C36A)
+F (.\GPIO.c)(0x60B0539D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mored/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mored/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F429xx -D_RTE_-o ./objects/gpio.o -MD)
+I (GPIO_Private.h)(0x60B041C3)
+I (GPIO.h)(0x60B05152)
+I (..\..\..\M.A_Diploma\STM32F42XXX_Device_Drivers\LIB\STD_TYPES.h)(0x60B02075)
+F (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC.c)(0x6094C36C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mored/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mored/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F429xx -D_RTE_-o ./objects/rcc.o -MD)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC.h)(0x6094C36B)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC_CONFIG.h)(0x6094C36D)
+I (..\..\..\M.A_Diploma\Drivers\RCC_FILES\STD_TYPES.h)(0x6094C36A)
+F (.\GPIO.h)(0x60B05152)()
+F (.\GPIO_Private.h)(0x60B041C3)()
+F (.\GPIO_Cfg.h)(0x60B04D47)()
+F (..\..\..\M.A_Diploma\STM32F42XXX_Device_Drivers\LIB\STD_TYPES.h)(0x60B02075)()
+F (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC.h)(0x6094C36B)()
+F (..\..\..\M.A_Diploma\Drivers\RCC_FILES\RCC_CONFIG.h)(0x6094C36D)()
+F (RTE\Device\STM32F429ZITx\startup_stm32f429xx.s)(0x5F6B2636)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/Mored/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mored/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 530" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F429xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f429xx.o)
+F (RTE\Device\STM32F429ZITx\system_stm32f4xx.c)(0x5F6B2636)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -Oz -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-IC:/Users/Mored/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Mored/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="530" -D_RTE_ -DSTM32F429xx -D_RTE_-o ./objects/system_stm32f4xx.o -MD)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6B2636)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h)(0x5F6B2636)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5DE051D2)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F2582)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8F2582)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0D174C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0D1778)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F2582)
+I (C:\Users\Mored\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6B2636)
