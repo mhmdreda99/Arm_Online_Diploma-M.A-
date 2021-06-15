@@ -6,10 +6,10 @@ void main(void)
     int userSearch  ; // temp variable to store user input for search 
     printf("Please Enter the number of Patients:");
     scanf("%d",&size);
-    patient_t pArr = (patient_t*)malloc(size*sizeof(patient_t));
+    patient_t *pArr = (patient_t*)malloc(size*sizeof(patient_t));
     for(int i =0 ;i<size ;i++)
     {
-        Get_Patient_Data(pArr[i]);
+        Get_Patient_Data(&pArr[i]);
 
     }
     printf("Please Enter the ID you want to Search: ");
