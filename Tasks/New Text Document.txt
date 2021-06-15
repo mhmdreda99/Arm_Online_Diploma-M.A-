@@ -1,6 +1,0 @@
-signed int Get_Patient_Index (struct patient pArr [] , unsigned int ArrSize , unsigned int SearchID) ;
-void Get_Patient_Data (struct patient * pArr) ;
-void Print_Patient_Data (struct patient * pArr);
-task 1
-task2:
-RCC config using (post build, precompiling , link time)
