@@ -87,7 +87,8 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
-
+        if(u8BIDIRMODE){SET_BIT(SPI1_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI1_CR1_REG,BIDIMODE);}
 
         break ;/**********END OF CASE 1*****/
     
@@ -130,6 +131,8 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
+        if(u8BIDIRMODE){SET_BIT(SPI2_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI2_CR1_REG,BIDIMODE);}
 
           break ; /**********END OF CASE 2*****/
        
@@ -172,7 +175,8 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
-
+        if(u8BIDIRMODE){SET_BIT(SPI3_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI3_CR1_REG,BIDIMODE);}
         break ; /**********END OF CASE 3*****/
         
         case SPI4: 
@@ -214,7 +218,8 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
-        
+        if(u8BIDIRMODE){SET_BIT(SPI4_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI4_CR1_REG,BIDIMODE);}
           break ; /**********END OF CASE 4*****/
         
         case SPI5:
@@ -256,6 +261,9 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
+          if(u8BIDIRMODE){SET_BIT(SPI5_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI5_CR1_REG,BIDIMODE);}
+         
           break ; /**********END OF CASE 5*****/
         
         case SPI6:
@@ -298,7 +306,8 @@ void SPI_Init(
         else{/*MISRA*/}
 
         /* TODO: Configure the SPI device direction */
-         
+         if(u8BIDIRMODE){SET_BIT(SPI6_CR1_REG,BIDIMODE);}
+        else{CLEAR_BIT(SPI6_CR1_REG,BIDIMODE);}
          
          break ; /**********END OF CASE 6*****/
 
