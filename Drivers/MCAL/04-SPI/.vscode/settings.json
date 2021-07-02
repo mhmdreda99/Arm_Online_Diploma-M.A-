@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "spi_private.h": "c",
+        "spi_cfg.h": "c"
+    }
+}

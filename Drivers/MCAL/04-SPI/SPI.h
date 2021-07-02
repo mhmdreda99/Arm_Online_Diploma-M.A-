@@ -11,7 +11,7 @@
 *                        of STM32F429ZI ARM Micro-Controller.                                    
 *                         
 *****************************************************************************/
-// File Gaurd
+/*This is preprocessor (Header file) guard  */
 #ifndef SPI_H
 #define SPI_H
 
@@ -56,9 +56,9 @@ void SPI_Init(
 );
 void SPI_Enable(uint8 U8SPI_Num);
 void SPI_Disable(uint8 U8SPI_Num);
-uint8 u8SPI_Write8BitData(uint8 u8SPINumber, uint8 u8DataOut);
-void vSPI_WriteMulti8BitData(uint8 u8SPINumber, uint8* u8DataOut, uint8* u8DataIn, uint8 u8Count);
-void vSPI_ReadMulti8BitData(uint8 u8SPINumber, uint8* u8DataIn, uint8 u8dummy, uint8 u8Count);
+uint8 u8SPI_Write8BitData(uint8 u8SPI_Num, uint8 u8DataOut);
+void vSPI_WriteMulti8BitData(uint8 u8SPI_Num, uint8* u8DataOut, uint8* u8DataIn, uint8 u8Count);
+void vSPI_ReadMulti8BitData(uint8 u8SPI_Num, uint8* u8DataIn, uint8 u8dummy, uint8 u8Count);
 
 
 

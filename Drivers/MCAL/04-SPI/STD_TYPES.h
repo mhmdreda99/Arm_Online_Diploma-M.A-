@@ -9,7 +9,7 @@
 * Notes                 :   None
 *
 *****************************************************************************/
-/* Preprocessor Guard        */
+/*This is preprocessor (Header file) guard  */
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
 

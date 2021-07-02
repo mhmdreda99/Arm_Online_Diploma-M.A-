@@ -19,7 +19,7 @@
 /* input : REG: reg name                      
 /*         BIT_NUM: number of the bit to be set                 
 /******************************************************************/
-#define SET_BIT(REG,BIT_NUM) ((REG)|=(1<<(BIT_NUM)))                               
+#define SET_BIT(REG,BIT_NUM) ((REG)|=(1U<<(BIT_NUM)))                               
 
 
 /**************************************************************/
@@ -27,14 +27,14 @@
 /* input : REG:  reg name                   
 /*         BIT_NUM: number of the bit to be cleared         
 /*************************************************************/
-#define CLEAR_BIT(REG,BIT_NUM) ((REG)&=(~(1<<(BIT_NUM))))                         
+#define CLEAR_BIT(REG,BIT_NUM) ((REG)&=(~(1U<<(BIT_NUM))))                         
 
 /************************************************************/
 /*This macro toggles a certain bit in any Register        
 /* input : REG: reg name                    
 /*         BIT_NUM: number of the bit to be toggle        
 /************************************************************/
-#define TOGGLE_BIT(REG,BIT_NUM) ((REG)^=(1<<(BIT_NUM)))                          
+#define TOGGLE_BIT(REG,BIT_NUM) ((REG)^=(1U<<(BIT_NUM)))                          
  
 /********************************************************/
 /*This macro to get a certain bit in any Register     
@@ -48,7 +48,7 @@
 /* input : REG: REG name                         
 /*         BIT_NUM: number of the bit to get          
 /****************************************************/
-#define IS_BIT_SET(REG,BIT_NUM)      ((REG)   &  (1<< BIT_NUM))
+#define IS_BIT_SET(REG,BIT_NUM)      ((REG)   &  (1U<< BIT_NUM))
 /********************************************************/
 /*This macro to check if  a certain bit is cleared  in any Register     
 /* input : REG: REG name                         

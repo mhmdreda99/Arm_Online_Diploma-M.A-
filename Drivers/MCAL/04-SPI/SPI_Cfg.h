@@ -9,7 +9,7 @@
 * Notes                 :   None
 *
 *****************************************************************************/
-
+/*This is preprocessor (Header file) guard  */
 #ifndef SPI_CFG_H_
 #define SPI_CFG_H_
 

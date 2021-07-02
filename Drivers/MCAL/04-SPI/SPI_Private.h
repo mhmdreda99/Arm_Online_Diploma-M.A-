@@ -12,7 +12,7 @@
 *						     STM32F429ZI ARM Micro-Controller.                                    
 *                         
 *****************************************************************************/
-// File GUARD
+/*This is preprocessor (Header file) guard  */
 #ifndef SPI_PRIVATE_H_
 #define SPI_PRIVATE_H_
 
