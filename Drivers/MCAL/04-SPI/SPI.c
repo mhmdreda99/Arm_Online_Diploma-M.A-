@@ -56,7 +56,7 @@ void SPI_Init(
         
         /*Configure CLOCK Polarity and Clock Phase */
         if(u8CPOL) { SET_BIT(SPI1_CR1_REG, CPOL) ; }
-        else{ CLEAR_BIT(SPI1_CR1_REG,CPOL)}
+        else{ CLEAR_BIT(SPI1_CR1_REG,CPOL);}
         
         if(u8CPHA)  { SET_BIT(SPI1_CR1_REG, CPHA) ; }
         else{ CLEAR_BIT(SPI1_CR1_REG,CPHA);}
@@ -86,13 +86,225 @@ void SPI_Init(
         if (u8BuadRate <=7) {SPI1_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
         else{/*MISRA*/}
 
-/* TODO: Configure the SPI device direction */
+        /* TODO: Configure the SPI device direction */
+
+
+        break ;/**********END OF CASE 1*****/
     
-        case SPI2: break ;
-        case SPI3: break ;
-        case SPI4: break ;
-        case SPI5: break ;
-        case SPI6: break ;
+        case SPI2:
+        /* Configure the spi device mode */ 
+        if (u8Device_MODE == SPI_MASTER_MODE)    {SET_BIT(SPI2_CR1_REG,MSTR) ;}
+        else if (u8Device_MODE == SPI_SLAVE_MODE){CLEAR_BIT(SPI2_CR1_REG ,MSTR); }
+        else { /*MISRA */}
+        
+        /*Configure CLOCK Polarity and Clock Phase */
+        if(u8CPOL) { SET_BIT(SPI2_CR1_REG, CPOL) ; }
+        else{ CLEAR_BIT(SPI2_CR1_REG,CPOL);}
+        
+        if(u8CPHA)  { SET_BIT(SPI2_CR1_REG, CPHA) ; }
+        else{ CLEAR_BIT(SPI2_CR1_REG,CPHA);}
+
+        /* Configure the spi Data FRAME Size and Data FRAME Format  */
+        if (u8Data_Size == DATASIZE_8 ) {CLEAR_BIT(SPI2_CR1_REG,DFF);}
+        else if(u8Data_Size == DATASIZE_16){SET_BIT(SPI2_CR1_REG,DFF);}
+        else {/*MISRA*/ }
+
+        if(u8Frame_Format== FRAMEFORMAT_LSB) {SET_BIT(SPI2_CR1_REG,LSBFIRST);}
+        else if(u8Frame_Format==FRAMEFORMAT_MSB){CLEAR_BIT(SPI2_CR1_REG,LSBFIRST);}
+        else{/*MISRA*/}
+
+        
+        /* Configure the slave select line NSS Master and Slave*/
+        if (u8Device_MODE == SPI_MASTER_MODE &&  u8NSS_MODE == NSS_MODE_SW )
+        {
+            SET_BIT(SPI2_CR1_REG,SSI);
+            SET_BIT(SPI2_CR1_REG,SSM);
+        }
+        else if (u8Device_MODE == SPI_MASTER_MODE && u8NSS_MODE == NSS_MODE_HW) {CLEAR_BIT(SPI2_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_SW ){SET_BIT(SPI2_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_HW ){CLEAR_BIT(SPI2_CR1_REG,SSM);}
+        else{/*MISRA*/}
+
+        /* Configure the  SPI deivce Baudrate */
+        if (u8BuadRate <=7) {SPI2_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
+        else{/*MISRA*/}
+
+        /* TODO: Configure the SPI device direction */
+
+          break ; /**********END OF CASE 2*****/
+       
+        case SPI3: 
+        /* Configure the spi device mode */ 
+        if (u8Device_MODE == SPI_MASTER_MODE)    {SET_BIT(SPI3_CR1_REG,MSTR) ;}
+        else if (u8Device_MODE == SPI_SLAVE_MODE){CLEAR_BIT(SPI3_CR1_REG ,MSTR); }
+        else { /*MISRA */}
+        
+        /*Configure CLOCK Polarity and Clock Phase */
+        if(u8CPOL) { SET_BIT(SPI3_CR1_REG, CPOL) ; }
+        else{ CLEAR_BIT(SPI3_CR1_REG,CPOL);}
+        
+        if(u8CPHA)  { SET_BIT(SPI3_CR1_REG, CPHA) ; }
+        else{ CLEAR_BIT(SPI3_CR1_REG,CPHA);}
+
+        /* Configure the spi Data FRAME Size and Data FRAME Format  */
+        if (u8Data_Size == DATASIZE_8 ) {CLEAR_BIT(SPI3_CR1_REG,DFF);}
+        else if(u8Data_Size == DATASIZE_16){SET_BIT(SPI3_CR1_REG,DFF);}
+        else {/*MISRA*/ }
+
+        if(u8Frame_Format== FRAMEFORMAT_LSB) {SET_BIT(SPI3_CR1_REG,LSBFIRST);}
+        else if(u8Frame_Format==FRAMEFORMAT_MSB){CLEAR_BIT(SPI3_CR1_REG,LSBFIRST);}
+        else{/*MISRA*/}
+
+        
+        /* Configure the slave select line NSS Master and Slave*/
+        if (u8Device_MODE == SPI_MASTER_MODE &&  u8NSS_MODE == NSS_MODE_SW )
+        {
+            SET_BIT(SPI3_CR1_REG,SSI);
+            SET_BIT(SPI3_CR1_REG,SSM);
+        }
+        else if (u8Device_MODE == SPI_MASTER_MODE && u8NSS_MODE == NSS_MODE_HW) {CLEAR_BIT(SPI3_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE  &&  u8NSS_MODE == NSS_MODE_SW){SET_BIT(SPI3_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE  &&  u8NSS_MODE == NSS_MODE_HW ){CLEAR_BIT(SPI3_CR1_REG,SSM);}
+        else{/*MISRA*/}
+
+        /* Configure the  SPI deivce Baudrate */
+        if (u8BuadRate <=7) {SPI3_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
+        else{/*MISRA*/}
+
+        /* TODO: Configure the SPI device direction */
+
+        break ; /**********END OF CASE 3*****/
+        
+        case SPI4: 
+        /* Configure the spi device mode */ 
+        if (u8Device_MODE == SPI_MASTER_MODE)    {SET_BIT(SPI4_CR1_REG,MSTR) ;}
+        else if (u8Device_MODE == SPI_SLAVE_MODE){CLEAR_BIT(SPI4_CR1_REG ,MSTR); }
+        else { /*MISRA */}
+        
+        /*Configure CLOCK Polarity and Clock Phase */
+        if(u8CPOL) { SET_BIT(SPI4_CR1_REG, CPOL) ; }
+        else{ CLEAR_BIT(SPI4_CR1_REG,CPOL);}
+        
+        if(u8CPHA)  { SET_BIT(SPI4_CR1_REG, CPHA) ; }
+        else{ CLEAR_BIT(SPI4_CR1_REG,CPHA);}
+
+        /* Configure the spi Data FRAME Size and Data FRAME Format  */
+        if (u8Data_Size == DATASIZE_8 ) {CLEAR_BIT(SPI4_CR1_REG,DFF);}
+        else if(u8Data_Size == DATASIZE_16){SET_BIT(SPI4_CR1_REG,DFF);}
+        else {/*MISRA*/ }
+
+        if(u8Frame_Format== FRAMEFORMAT_LSB) {SET_BIT(SPI4_CR1_REG,LSBFIRST);}
+        else if(u8Frame_Format==FRAMEFORMAT_MSB){CLEAR_BIT(SPI4_CR1_REG,LSBFIRST);}
+        else{/*MISRA*/}
+
+        
+        /* Configure the slave select line NSS Master and Slave*/
+        if (u8Device_MODE == SPI_MASTER_MODE &&  u8NSS_MODE == NSS_MODE_SW )
+        {
+            SET_BIT(SPI4_CR1_REG,SSI);
+            SET_BIT(SPI4_CR1_REG,SSM);
+        }
+        else if (u8Device_MODE == SPI_MASTER_MODE && u8NSS_MODE == NSS_MODE_HW) {CLEAR_BIT(SPI4_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_SW ){SET_BIT(SPI4_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_HW ){CLEAR_BIT(SPI4_CR1_REG,SSM);}
+        else{/*MISRA*/}
+
+        /* Configure the  SPI deivce Baudrate */
+        if (u8BuadRate <=7) {SPI4_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
+        else{/*MISRA*/}
+
+        /* TODO: Configure the SPI device direction */
+        
+          break ; /**********END OF CASE 4*****/
+        
+        case SPI5:
+        /* Configure the spi device mode */ 
+        if (u8Device_MODE == SPI_MASTER_MODE)    {SET_BIT(SPI5_CR1_REG,MSTR) ;}
+        else if (u8Device_MODE == SPI_SLAVE_MODE){CLEAR_BIT(SPI5_CR1_REG ,MSTR); }
+        else { /*MISRA */}
+        
+        /*Configure CLOCK Polarity and Clock Phase */
+        if(u8CPOL) { SET_BIT(SPI5_CR1_REG, CPOL) ; }
+        else{ CLEAR_BIT(SPI5_CR1_REG,CPOL);}
+        
+        if(u8CPHA)  { SET_BIT(SPI5_CR1_REG, CPHA) ; }
+        else{ CLEAR_BIT(SPI5_CR1_REG,CPHA);}
+
+        /* Configure the spi Data FRAME Size and Data FRAME Format  */
+        if (u8Data_Size == DATASIZE_8 ) {CLEAR_BIT(SPI5_CR1_REG,DFF);}
+        else if(u8Data_Size == DATASIZE_16){SET_BIT(SPI5_CR1_REG,DFF);}
+        else {/*MISRA*/ }
+
+        if(u8Frame_Format== FRAMEFORMAT_LSB) {SET_BIT(SPI5_CR1_REG,LSBFIRST);}
+        else if(u8Frame_Format==FRAMEFORMAT_MSB){CLEAR_BIT(SPI5_CR1_REG,LSBFIRST);}
+        else{/*MISRA*/}
+
+        
+        /* Configure the slave select line NSS Master and Slave*/
+        if (u8Device_MODE == SPI_MASTER_MODE &&  u8NSS_MODE == NSS_MODE_SW )
+        {
+            SET_BIT(SPI5_CR1_REG,SSI);
+            SET_BIT(SPI5_CR1_REG,SSM);
+        }
+        else if (u8Device_MODE == SPI_MASTER_MODE && u8NSS_MODE == NSS_MODE_HW) {CLEAR_BIT(SPI5_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_SW ){SET_BIT(SPI5_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_HW ){CLEAR_BIT(SPI5_CR1_REG,SSM);}
+        else{/*MISRA*/}
+
+        /* Configure the  SPI deivce Baudrate */
+        if (u8BuadRate <=7) {SPI5_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
+        else{/*MISRA*/}
+
+        /* TODO: Configure the SPI device direction */
+          break ; /**********END OF CASE 5*****/
+        
+        case SPI6:
+
+        /* Configure the spi device mode */ 
+        if (u8Device_MODE == SPI_MASTER_MODE)    {SET_BIT(SPI6_CR1_REG,MSTR) ;}
+        else if (u8Device_MODE == SPI_SLAVE_MODE){CLEAR_BIT(SPI6_CR1_REG ,MSTR); }
+        else { /*MISRA */}
+        
+        /*Configure CLOCK Polarity and Clock Phase */
+        if(u8CPOL) { SET_BIT(SPI6_CR1_REG, CPOL) ; }
+        else{ CLEAR_BIT(SPI6_CR1_REG,CPOL);}
+        
+        if(u8CPHA)  { SET_BIT(SPI6_CR1_REG, CPHA) ; }
+        else{ CLEAR_BIT(SPI6_CR1_REG,CPHA);}
+
+        /* Configure the spi Data FRAME Size and Data FRAME Format  */
+        if (u8Data_Size == DATASIZE_8 ) {CLEAR_BIT(SPI6_CR1_REG,DFF);}
+        else if(u8Data_Size == DATASIZE_16){SET_BIT(SPI6_CR1_REG,DFF);}
+        else {/*MISRA*/ }
+
+        if(u8Frame_Format== FRAMEFORMAT_LSB) {SET_BIT(SPI6_CR1_REG,LSBFIRST);}
+        else if(u8Frame_Format==FRAMEFORMAT_MSB){CLEAR_BIT(SPI6_CR1_REG,LSBFIRST);}
+        else{/*MISRA*/}
+
+        
+        /* Configure the slave select line NSS Master and Slave*/
+        if (u8Device_MODE == SPI_MASTER_MODE &&  u8NSS_MODE == NSS_MODE_SW )
+        {
+            SET_BIT(SPI6_CR1_REG,SSI);
+            SET_BIT(SPI6_CR1_REG,SSM);
+        }
+        else if (u8Device_MODE == SPI_MASTER_MODE && u8NSS_MODE == NSS_MODE_HW) {CLEAR_BIT(SPI6_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_SW ){SET_BIT(SPI6_CR1_REG,SSM);}
+        else if (u8Device_MODE == SPI_SLAVE_MODE &&  u8NSS_MODE == NSS_MODE_HW ){CLEAR_BIT(SPI6_CR1_REG,SSM);}
+        else{/*MISRA*/}
+
+        /* Configure the  SPI deivce Baudrate */
+        if (u8BuadRate <=7) {SPI6_CR1_REG |=(u8BuadRate<<3);} // the input value shifted by 3 bits
+        else{/*MISRA*/}
+
+        /* TODO: Configure the SPI device direction */
+         
+         
+         break ; /**********END OF CASE 6*****/
+
+        default:
+        break;
+    /*END OF SWITCH*/ 
 
     }
 }
