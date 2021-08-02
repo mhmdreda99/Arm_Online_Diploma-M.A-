@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "spi_private.h": "c",
-        "spi_cfg.h": "c"
+        "spi_cfg.h": "c",
+        "std_macros.h": "c"
     }
 }
